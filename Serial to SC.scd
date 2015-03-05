@@ -2,7 +2,7 @@ s.boot;
 (
 //From Arduino Patch FSR_data
 //An Example of parcing serial data from string
-~kbs = {Bus.control(s)}!10;
+~kbs = {Bus.control(s)}!15;
 ~ino = ArduinoSMS("/dev/tty.usbserial-AE015LGU", 115200);
 SynthDef(\siney, {Out.ar(0, SinOsc.ar(\freq.kr(0, 0.05).linexp(0.0,1.0,200,2500))*\amp.kr(1.0, 0.002))}).add;
 ~pro = NetAddr("127.0.0.1", 12321);
